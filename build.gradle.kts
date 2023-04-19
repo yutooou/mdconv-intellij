@@ -18,12 +18,18 @@ version = properties("pluginVersion").get()
 
 // Configure project's dependencies
 repositories {
+    google()
     mavenCentral()
 }
 
 // Dependencies are managed with Gradle version catalog - read more: https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
 dependencies {
 //    implementation(libs.annotations)
+    implementation("org.apache.poi:poi:5.2.3")
+    implementation("org.apache.poi:poi-ooxml:5.2.3")
+    implementation("org.apache.poi:poi-ooxml-schemas:5.2.3")
+    // 扩展包
+    implementation("org.apache.poi:poi-scratchpad:5.2.3")
 }
 
 // Set the JVM language level used to build the project. Use Java 11 for 2020.3+, and Java 17 for 2022.2+.
